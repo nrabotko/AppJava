@@ -1,5 +1,7 @@
 package com.example.appclock;
 
+import android.view.Window;
+import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 

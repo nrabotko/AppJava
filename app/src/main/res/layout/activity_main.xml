@@ -5,15 +5,51 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="#F0F0F0">
 
+    <ImageView
+            android:layout_height="254dp" app:srcCompat="@drawable/mountins" android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+            android:layout_weight="0"
+            android:layout_width="437dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="Мой будильник"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintVertical_bias="0.039" app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:id="@+id/textView"/>
+    <ImageView
+            android:layout_width="23dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/user" android:id="@+id/imageView2"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintVertical_bias="0.038"/>
+    <view android:layout_width="336dp" android:layout_height="83dp"
+          class="androidx.appcompat.widget.ActionMenuView" android:id="@+id/view"
+          app:layout_constraintTop_toBottomOf="@+id/imageView"
+          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.491"
+          app:layout_constraintVertical_bias="0.167" android:tint="#606060" app:tintMode="src_over"/>
+    <Switch
+            android:layout_width="70dp"
+            android:layout_height="38dp" android:id="@+id/switch1"
+            app:layout_constraintEnd_toEndOf="@+id/view" app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.487"/>
+    <TextView
+            android:text="06:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintEnd_toStartOf="@+id/switch1"
+            app:layout_constraintStart_toStartOf="@+id/view" app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintVertical_bias="0.484" android:textSize="36sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
